@@ -1,0 +1,275 @@
+a {
+  font-family: sans-serif;
+}
+
+/*img {
+  float: left;
+}*/
+
+/** initial setup **/
+#tweets {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.nano {
+  position : relative;
+  width    : 50%;
+  height   : 50%;
+  overflow : hidden;
+}
+.nano .content {
+  position      : absolute;
+  overflow      : scroll;
+  overflow-x    : hidden;
+  top           : 0;
+  right         : 0;
+  bottom        : 0;
+  left          : 0;
+}
+.nano .content:focus {
+  outline: thin dotted;
+}
+.nano .content::-webkit-scrollbar {
+  visibility: hidden;
+}
+.has-scrollbar .content::-webkit-scrollbar {
+  visibility: visible;
+}
+.nano > .pane {
+  background : rgba(0,0,0,.25);
+  position   : absolute;
+  width      : 10px;
+  right      : 0;
+  top        : 0;
+  bottom     : 0;
+  visibility : hidden\9; /* Target only IE7 and IE8 with this hack */
+  opacity    : .01;
+  -webkit-transition    : .2s;
+  -moz-transition       : .2s;
+  -o-transition         : .2s;
+  transition            : .2s;
+  -moz-border-radius    : 5px;
+  -webkit-border-radius : 5px;
+  border-radius         : 5px;
+}
+.nano > .pane > .slider {
+  background: #444;
+  background: rgba(0,0,0,.5);
+  position              : relative;
+  margin                : 0 1px;
+  -moz-border-radius    : 3px;
+  -webkit-border-radius : 3px;
+  border-radius         : 3px;
+}
+.nano:hover > .pane, .pane.active, .pane.flashed {
+  visibility : visible\9; /* Target only IE7 and IE8 with this hack */
+  opacity    : 0.99;
+}
+
+.nano { background: #bba; width: 500px; height: 100px; }
+.nano .content { padding: 10px; }
+.nano .pane   { background: #888; }
+.nano .slider { background: #111; }
+
+.twitter-tweet {
+  border-bottom: 1px lightgrey solid;
+  margin-bottom: 17px;
+  font-size: 14px;
+}
+
+.screen-name {
+  font-weight: bold;
+  color: #31323D;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 5px 0 0 5px;
+}
+
+.tweet-text {
+  margin: 1px 0 5px 0;
+  font-size: 14px;
+  float: left;
+}
+
+p.date {
+  font-size: 12px;
+  opacity: .4;
+  margin: 0 0 10px 0;
+}
+
+body {
+  background-color: white;
+  padding: 5px;
+}
+
+
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #444;
+  background: #FBF6F4;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+
+
+}
+/* I use full-width horizontal sections a lot */
+body > header,
+body > section,
+body > footer {
+  display: block;
+  width: 100%;
+  clear: both;
+
+}
+
+h1, h2, h3 {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: -.05em;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.4em;
+}
+
+a {
+  color: #c00;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+header, section {
+  border-bottom: 1px solid #eee;
+}
+
+header, section, footer {
+  border-top: 1px solid #fff;
+}
+
+section, footer {
+  padding: 30px 0;
+}
+
+header h1 a {
+  color: #333;
+  border-bottom: none;
+}
+
+header p {
+  margin: 2em 0;
+}
+
+.lead {
+  font-size: 1.5em;
+}
+
+p, pre {
+  font-size: 1.2em;
+  line-height: 1.8em;
+}
+
+.button {
+  border-radius: 5px;
+  background: #efefef;
+  background-image: -moz-linear-gradient(#FCFCFC, #EFEFEF);
+  background-image: -webkit-linear-gradient(#FCFCFC, #EFEFEF);
+  background-image: -ms-linear-gradient(#FCFCFC, #EFEFEF);
+  background-image: linear-gradient(#FCFCFC, #EFEFEF);
+  border: 1px solid #DDDDDD;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1);
+  padding: 8px 16px;
+  text-shadow: 0 1px 0 #fff;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: .5em;
+}
+
+.button:hover, .button:focus {
+  outline: none;
+  border: 1px solid rgba(255,0,0,.5);
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 0 10px rgba(255,0,0,.3);
+}
+
+footer p {
+  margin: 0;
+  font-size: 1em;
+}
+
+@media (min-width: 960px){
+  h1 {
+    font-size: 5em;
+  }
+  h2 {
+    font-size: 2.6em;
+  }
+  h3 {
+    font-size: 2em;
+  }
+  .lead {
+    font-size: 1.8em;
+  }
+}
+
+/* Styles to help demonstrate the grid */
+
+code, pre {
+  font-family: "Source Code Pro", Consolas, Menlo, Monaco, monospace;
+  background: #F1E3D5;
+  color: #333;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+pre {
+  padding: 10px;
+  text-align: center;
+}
+
+.demo p {
+  margin: 0;
+}
+
+.demo .unit pre {
+  margin: 0;
+  padding: 20px 0;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.demo .unit pre:hover {
+  background: #fc0;
+}
+
+.grid, .unit {
+  -webkit-transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+.demo .unit .grid {
+  overflow: hidden;
+  /*background: rgba(241,227,213,.5);*/
+  background-image: url("img/csr.jpg");
+}
+
+.demo .unit .grid:first-child {
+  border-radius: 5px 5px 0 0;
+}
+
+.demo .unit .grid:last-child {
+  border-radius: 0 0 5px 5px;
+}
